@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.bg {
+  /* Asumsikan .container adalah kelas dari elemen wadah background */
+  height: 100vh;
+  width: 100vw;
+  background-image: url(blue.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Jika ingin menambahkan elemen lain di atas background */
+}
+
+.box-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Keeps logo horizontally centered */
+  width: 500px;
+}
+
+/*------------ Right box ------------*/
+
+.right-box {
+  padding: 25px 30px 30px 30px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #0a53bf, #5d95f5);
+  color: white; /* Adjust text color for better readability on gradient background */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder {
+  font-size: 16px;
+}
+
+.rounded-3 {
+  border-radius: 7px;
+}
+
+.rounded-4 {
+  border-radius: 10px;
+}
+.rounded-5 {
+  border-radius: 20px;
+}
+
+/*------------ For small screens------------*/
+
+@media only screen and (max-width: 768px) {
+  .box-area {
+    margin: 0 10px;
+  }
+
+  .right-box {
+    order: 1;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+}
+
+/*------------ Input Field ------------*/
+
+*,
+*:focus {
+  outline: none;
+}
+
+.logo-container {
+  margin: 0 auto; /* Centers logo vertically and horizontally */
+  text-align: center; /* Maintains horizontal centering */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-container img {
+  width: 200px; /* Sesuaikan ukuran sesuai kebutuhan */
+  height: auto;
+  object-fit: cover;
+}
+
+.header-text {
+  padding-top: 15px;
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-item input {
+  display: block;
+  width: 385px;
+  height: 41px;
+  background: transparent;
+  border: solid 1px #131313;
+  transition: all 0.3s ease;
+  padding: 0 15px;
+}
+.form-item input:focus {
+  border-color: blue;
+}
+.form-item label {
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 13px;
+  left: 57px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 10px;
+  color: #e9e9e9;
+  transition: all 0.3s ease;
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label {
+  font-size: 12px;
+  background-color: #2877ef;
+  top: -9px;
+  left: 57px;
+}
+
+.form-item input:focus + label {
+  color: blue;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.regulasi1 {
+  font-size: 14px;
+  font-weight: 520;
+  color: blue;
+  text-decoration: none;
+  padding-left: 290px;
+}
+
+.regulasi2 {
+  font-size: 14px;
+  font-weight: 520;
+  color: blue;
+  text-decoration: none;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.invalid-border {
+  border-color: red !important;
+}
+
+.bx-envelope,
+.bx-lock-alt {
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 10px 0;
+}
+.fa-eye,
+.fa-eye-slash {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
